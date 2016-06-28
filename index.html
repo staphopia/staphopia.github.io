@@ -1,4 +1,148 @@
-Hello world!
 
-Moving! Be back soon!
 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CSS -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold&subset=Latin">
+    
+    <title>Staphopia</title>
+    <link rel="shortcut icon" href="/static/img/favicon.ico" />
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                Staphopia
+            </a>
+        </div>
+    </div>
+
+
+    <!-- End Top Bar -->
+
+    <!-- Main Content-->
+    <div class="container fix-navbar">
+        
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>About Staphopia</h3>
+                        <p class="indent">
+                            Staphopia is a database of information about the
+                            genomes of the bacterial pathogen <em>Staphylococcus
+                            aureus</em>. Life-threatening Methicillin-resistant
+                            <em>S. aureus</em> (MRSA) infections strike across
+                            our society, both in the community and hospital
+                            settings. In the past 3-4 years whole genome shotgun
+                            sequencing of clinical isolates has become common,
+                            as technology improvements have reduced the cost
+                            of producing genetic data.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            <img class="embed" src="/static/img/mlst-summary.png" />
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="indent">
+                            The introduction of 'bench top' instruments, such as the
+                            <a href="http://www.illumina.com/systems/miseq.html" target="_blank" title="Illumina MiSeq">Illumina MiSeq</a>,
+                            has accelerated this trend. Staphopia aims to
+                            provide rapid analysis of whole-genome data with
+                            the aim of producing useful <em>S. aureus</em>
+                            specific results, such as genotype, antibiotic
+                            resistance and virulence gene profiles. Staphopia
+                            was designed to be used by people not expert in
+                            genomics.
+                        </p>
+                        <p class="indent">
+                            We are currently developing the beta version of the website.
+                            In later updates we will allow users to submit their own data
+                            to our pipeline as well as a number of additional features.
+                            The main genomes page (currently displaying the results of
+                            analysis of more than 24,000 publicly available <em>S. aureus</em>
+                            projects downloaded from the NCBI SRA website) allows users to
+                            search the genomes based on attributes such as sequence type.
+                        </p>
+                        <p class="indent">
+                            Clicking on a genome entry brings up an individual page
+                            (<a href="/samples/SRX554703/" target="_blank"
+                               title="View SRX554703/ in a new window/tab.">this genome for example</a>),
+                            allowing the user to explore the attributes
+                            predicted by our pipeline.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="indent">
+                            Staphopia was created by Robert Petit and Tim Read at Emory
+                            University School of Medicine in Atlanta Georgia, USA.  We would
+                            like to thank Colleen Kraft, Tauqeer Alam, Santiago Castillo, Nikolay Braykov,
+                            Signe White, Michelle Su, King Jordan and Jim Heitner
+                            for help in putting together Staphopia. We acknowledge (and are
+                            grateful) for data from these sources:
+                            <a href="http://www.ncbi.nlm.nih.gov/sra" target="_blank">NCBI SRA</a>,
+                            <a href="http://gensc.org/gc_wiki/index.php/MIGS/MIMS" target="_blank">MIGS/MINS</a>,
+                            <a href="http://saureus.mlst.net/" target="_blank"><i>S. aureus</i> MLST</a>,
+                            <a href="http://ardb.cbcb.umd.edu/" target="_blank">ARDB</a>,
+                            <a href="http://jac.oxfordjournals.org/content/63/5/877.long" target="_blank">StaphVar</a>, and
+                            <a href="http://www.staphylococcus.net/" target="_blank">SCCmec</a>.
+                        </p>
+                        <p class="indent">
+                            Thanks also to those researchers and institutions who have contributed
+                            published and unpublished sequence public information in to the SRA
+                            databases.
+                            <a href="/top10/" >View Top 10 Contributers.</a>
+                            If you would like to stay informed about the progress and improvements
+                            of Staphopia, we encourage you to
+                            <a href="/contact/">contact us</a>.
+                        </p>
+                        <p class="indent">
+                            Funding for this study from Emory University, Amazon AWS in Education Grant Program, and NIH grant 1R56AI091827-01A1
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Main Content-->
+
+    <!-- Footer -->
+    <footer class="row">
+        <div>
+            <hr />
+            <div class="copyright">Copyright &#169; 2012-2015 Emory University. All rights reserved.</div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    </div>
+
+    <!-- Javascipt -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- End Javascript -->
+</body>
+</html>
