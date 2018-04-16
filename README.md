@@ -1,1 +1,1 @@
-Used to redirect users from `staphopia.com` to `staphopia.emory.edu`
+Used to redirect users from `www.staphopia.com` to `staphopia.emory.edu`
