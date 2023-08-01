@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An information database for the microbial pathogen, Staphylococcus aureus." />
+    <meta property="og:title" content="Staphopia" />
+    <meta property="og:description" content="An information database for the microbial pathogen, Staphylococcus aureus." />
+    <meta property="og:image" content="/static/img/favicon.ico" />
+    <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="/static/css/staphopia.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    
+    <title>Staphopia</title>
+</head>
+
+
+<body>
+
+    <!-- Top Bar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Staphopia</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarTop" aria-controls="navbarTop"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTop">
+        <!-- Left Nav Section -->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item +/"><a class="nav-link" target="_blank" href="https://doi.org/10.6084/m9.figshare.14394704.v1">Samples</a></li>
+        </ul>
+        <!-- Right Nav Section -->
+        <ul class="navbar-nav">
+        </ul>
+    </div>
+    </nav>
+    <br />
+    <!-- End Top Bar -->
+
+    
+    <div class="container">
+        <!-- Main Content-->
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Welcome To Staphopia</h2>
+                        <h3>About Staphopia</h3>
+                        <p class="indent">
+                            Staphopia is a database focusing on the genomes of
+                            the bacterial pathogen <em>Staphylococcus
+                            aureus</em>. Life-threatening Methicillin-resistant
+                            <em>S. aureus</em> (MRSA) infections strike across
+                            our society, both in the community and hospital
+                            settings. In recent years whole genome shotgun
+                            sequencing of clinical isolates has become common.
+                            As of August 2017 there were over 44,000 publicly
+                            available <em>S. aureus</em> sequencing projects
+                            in <a href="http://www.ebi.ac.uk/ena/data/view/Taxon:1280&portal=read_experiment&subtree=true" target="_blank">EBI's ENA</a>
+                            database. Staphopia aims to provide rapid
+                            analysis of these whole-genome datasets as well
+                            as useful <em>S. aureus</em> specific results, such
+                            as genotype, antibiotic resistance and virulence
+                            gene profiles.
+                        </p>
+                        <p class="indent">
+                            Users can create an account to access a basic
+                            summary of results for each public sample through
+                            this site. Another option, is to access our web API
+                            with the use of our R package.
+                            For those interested in processing their own data,
+                            we have made both the Staphopia analysis pipeline
+                            and web application publicly available on GitHub
+                            (see below). We have also created a Docker
+                            image to simplify the installation process both
+                            locally and in the cloud. Also much of the
+                            Staphopia pipeline can be used a template for other
+                            organism-specific databases.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col justify-content-center">
+                        <h3>An Overview of Staphopia</h3>
+                        <img class="d-block mx-auto img-fluid" src="/static/img/staphopia-overview.png" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Staphopia Resources</h3>
+                        <p>
+                            <h4>GitHub</h4>
+                            <dl class="dl-horizontal">
+                              <dt>
+                                 <a href="https://www.github.com/staphopia/staphopia-r"
+                                    target="_blank" title="Staphopia-R Package on GitHub">
+                                        Staphopia-R
+                                 </a>
+                              </dt>
+                              <dd>An R package to query Staphopia's API</dd>
+                              <dt>
+                                <a href="https://www.github.com/staphopia/staphopia-ap"
+                                   target="_blank" title="Staphopia Analysis Pipeline on GitHub">
+                                    Staphopia-AP
+                                </a>
+                              </dt>
+                              <dd>Staphopia's analysis pipeline (Dockerized)</dd>
+                              <dt>
+                                 <a href="https://www.github.com/staphopia/staphopia-web"
+                                    target="_blank" title="Staphopia-Web on GitHub">
+                                        Staphopia-Web
+                                 </a>
+                              </dt>
+                              <dd>Staphopia's Django powered web application</dd>
+                            </dl>
+                        </p>
+                        <p>
+                            <h4>Cancer Genomics Cloud (CGC)</h4>
+                            <dl class="dl-horizontal">
+                              <dt>
+                                 <a href="https://cgc.sbgenomics.com/public/apps#q?search=staphopia"
+                                    target="_blank" title="Run Staphopia-AP on CGC">
+                                        Staphopia-AP on CGC
+                                 </a>
+                              </dt>
+                              <dd>Replicate Staphopia-AP on the CGC platform.</dd>
+                            </dl>
+                        </p>
+                        <p>
+                            <h4>Documentation</h4>
+                            <dl class="dl-horizontal">
+                              <dt>
+                                <a href="/docs/api/"
+                                   target="_blank" title="Staphopia API Documentation">
+                                    API Documentation
+                                </a>
+                              </dt>
+                              <dd>Learn more about Staphopia's web API.</dd>
+                            </dl>
+                        </p>
+                        <h3>Acknowledgements</h3>
+                        <p class="indent">
+                            Staphopia was created by Robert Petit and Tim Read at Emory
+                            University School of Medicine in Atlanta Georgia, USA.  We would
+                            like to thank Colleen Kraft, Tauqeer Alam, Santiago Castillo, Nikolay Braykov,
+                            Signe White, Michelle Su, Michael Frisch, Jim Hogan, King Jordan and Jim Heitner
+                            for help in putting together Staphopia. We acknowledge (and are
+                            grateful) for data from these sources:
+                            <a href="http://www.ebi.ac.uk/ena/data/view/Taxon:1280&portal=read_experiment&subtree=true" target="_blank">EBI's ENA</a>,
+                            <a href="http://gensc.org/gc_wiki/index.php/MIGS/MIMS" target="_blank">MIGS/MINS</a>,
+                            <a href="http://saureus.mlst.net/" target="_blank"><i>S. aureus</i> MLST</a>,
+                            <a href="http://ardb.cbcb.umd.edu/" target="_blank">ARDB</a>,
+                            <a href="http://jac.oxfordjournals.org/content/63/5/877.long" target="_blank">StaphVar</a>, and
+                            <a href="http://www.staphylococcus.net/" target="_blank">SCCmec</a>.
+                        </p>
+                        <p class="indent">
+                            Thanks also to those researchers and institutions who have contributed
+                            published and unpublished sequence public information in to the SRA
+                            databases.
+                            <a href="/top10/" >View Top 10 Contributers.</a>
+                            If you would like to stay informed about the progress and improvements
+                            of Staphopia, we encourage you to
+                            <a href="/contact/">contact us</a>.
+                        </p>
+                        <h3>Funding</h3>
+                        <p class="indent">
+                            Funding for this study from Emory University, Amazon AWS in Education Grant Program, and NIH grants AI091827 and AI121860. The Seven Bridges NCI Cancer Genomics Cloud pilot was supported in part by the funds from the National Cancer Institute, National Institutes of Health, Department of Health and Human Services, under Contract No. HHSN261201400008C.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Main Content-->
+
+    <!-- Footer -->
+    <footer class="row justify-content-center">
+        <div class="col">
+            <hr />
+            <div class="copyright">Copyright &#169; 2012-2023 Emory University. All rights reserved.</div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    </div>
+
+    <!-- Javascipt -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+            integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+            integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+            crossorigin="anonymous"></script>
+    <script src="/static/js/staphopia.js"></script>
+    <script>
+        $('.dropdown-toggle').dropdown()
+    </script>
+    
+    <script>
+        $(document).ready(function() {
+            $("body").tooltip({ selector: '[data-toggle=tooltip]' });
+        });
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-104199698-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- End Javascript -->
+
+</body>
+</html>
+
